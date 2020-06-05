@@ -1,0 +1,60 @@
+
+\chapter{Literature Survey \& Problem Motivation} % Main chapter title
+
+\label{Chapter 2} 
+\lhead{Chapter 2. \emph{Literature Survey \& Problem Motivation}} 
+
+In this chapter, we will discuss the literature survey, problem motivations and difficulty or challenges faced during project completion.
+
+
+\section{Literature Survey}
+Tanwi Mallick et al. develop NrityaGuru – an autonomous coaching system to give real-time instructional feedback regarding the accuracy of Bharatanatyam as performed by a learner.
+
+Manel Sekma et al. proposes motion descriptor called Seg SIFT-ACC for human motion recognising. It is based on temporal segmentation into elementary motion segments. \citep{sekma2013human}
+
+Matthew Cooper et al. presented approach on temporal video segmentation using supervised machine learning classification. So, we have also tried to use supervised machine learning in the given project.
+They have created standard features through pairwise similarity of images. \citep{cooper2007video}
+
+Rizwan Chaudhry et al. suggested a method for representing every frame of a video using a Histogram of oriented optical flow (HOOF). It is used for recognizing human actions by classifying HOOF time-series. \citep{chaudhry2009histograms}
+
+Local histogram approaches used local spatiotemporal characteristics or feature for representing human activity in a video. \citep{laptev2005space}
+
+Optical flow histograms were applied to match the movement(motion) of a player in a soccer match to that of a subject in a control video.  \citep{efros2003recognizing}
+
+Tran et al. present an optical flow and shape-based approach that uses separate histograms for the horizontal and vertical components of the optical flow as well as the contour of the person as a motion descriptor. \citep{tran2008human}
+
+Guozhu Liu at el. showed Key Frame Extraction method from compressed MPEG  video data. It helps in reducing Video processing time significantly.It helps in video segmentation and Keyframe extraction. \citep{liu2010key}.
+
+Konečný, J. and Hagara, M used RGB, depth images and combine appearance (Histograms of Oriented Gradients) and motion descriptors (Histogram of optical flow) for parallel temporal segmentation and recognition. \citep{konevcny2014one}
+
+
+\newpage
+\section{Motivation}
+Keyframe, motion frame and Key Posture detection is a fundamental step towards the analysis of dance steps in Bharatanatyam with the perspective of computer vision and human-computer interaction.
+\begin{itemize}
+    \item Distinguish Keyframe to motion frame can be used to automate or design an annotation tool. An annotation tool is used to determine which are Keyframe or motion frame 
+    \item If the Keyframe is detected, we could recognize Adavu based on the occurrence of key-posture sequences. If the motion frame is detected, we could be able to classify the motion in the given Adavu.
+\end{itemize}
+
+Optical flow is the pattern of the apparent motion of objects, surfaces, and edges in a visual scene created by the relative motion between an observer and a scene \citep{wiki:003}. It is the distribution of ostensible(apparent) velocities of motion of illumination patterns in a scene or image \citep{wiki:003}.
+\begin{itemize}
+    \item Detection of Keyframe and motion frame from given set frames from Adavus video.
+    \item Optical flow is used to extract the feature from the Gray frame of video as our main objective is to classify the motion frame and Keyframe from frames of video.
+    \item Histogram of optical flow (HOOF) used as a final feature vector to input for binary the classifier.
+
+\end{itemize}
+
+\section{Challenges}
+During the analysis of the keyframe and motion frame, some fundamental difficulties have been faced.
+
+\begin{itemize}
+    \item \textbf{Challenges 1}: At the start of the transition. There may be some very slow motions. That slow-motion may be falsely classified as Keyframe.
+    
+    \item \textbf{Challenges 2}: The distinction between Keyframe and motion frames may not be accessible due to the existence of complex motions and postures.
+    
+    \item \textbf{Challenges 3}: Non-visibility of foot/leg movements and occlusion due to the sophisticated dress style.
+    
+    \item \textbf{Challenges 4}: In some cases, when a dancer is in Key posture position, the movement of the dress materials may be misinterpreted as body movements( motion frame).
+    
+    \item \textbf{Challenges 5}: The non-availability of annotated Bharatanatyam Adavus.
+\end{itemize}
